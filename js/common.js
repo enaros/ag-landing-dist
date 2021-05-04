@@ -189,6 +189,30 @@ $(document).ready(function () {
             }]
         });
     })();
+
+    // partners
+    // slider for mobile
+    $('.js-slider-mobile').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        speed: 600,
+        responsive: [{
+            breakpoint: 9999,
+            settings: "unslick"
+        }, {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1
+            }
+
+        }]
+    });
+
+    $(window).on('resize orientationchange', function () {
+        $('.js-slider-resize').slick('resize');
+    });
 });
 
 // aos animation
